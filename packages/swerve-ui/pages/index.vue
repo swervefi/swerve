@@ -1,9 +1,24 @@
 <template>
-  <div>
-    <h1>Swerve</h1>
+  <div class="home">
+    <SwerveSwap />
   </div>
 </template>
 
 <script lang="ts">
-// use TypeScript here
+import { defineComponent } from "@vue/composition-api";
+import SwerveSwap from "@/components/form/SwerveSwap.vue";
+
+export default defineComponent({
+  components: {
+    SwerveSwap,
+  },
+});
 </script>
+
+<style lang="scss">
+.home {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+</style>
