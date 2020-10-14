@@ -5,14 +5,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "@vue/composition-api";
-import SwerveSwap from "@/components/form/SwerveSwap.vue";
+import { defineComponent } from '@vue/composition-api'
+import SwerveSwap from '@/components/form/SwerveSwap.vue'
 
 export default defineComponent({
   components: {
-    SwerveSwap,
-  },
-});
+    SwerveSwap
+  }
+})
 </script>
 
 <style lang="scss">

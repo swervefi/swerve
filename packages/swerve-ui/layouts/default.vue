@@ -6,14 +6,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "@vue/composition-api";
-import SwerveMenu from "@/components/menu/SwerveMenu.vue";
+import { defineComponent } from '@vue/composition-api'
+import SwerveMenu from '@/components/menu/SwerveMenu.vue'
 
 export default defineComponent({
   components: {
-    SwerveMenu,
-  },
-});
+    SwerveMenu
+  }
+})
 </script>
 
 <style lang="scss">

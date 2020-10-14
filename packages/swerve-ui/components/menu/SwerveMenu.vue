@@ -1,16 +1,11 @@
 <template>
-  <div>
-    <SwerveLogo />
-  </div>
+  <div>LOGO</div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "@vue/composition-api";
-import SwerveLogo from "@/components/common/SwerveLogo.vue";
+import { defineComponent } from '@vue/composition-api'
 
 export default defineComponent({
-  components: {
-    SwerveLogo,
-  },
-});
+  components: {}
+})
 </script>

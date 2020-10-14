@@ -1,10 +1,13 @@
 <template>
-  <input />
+  <input></input>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "@vue/composition-api";
-export default defineComponent({});
+import { defineComponent } from '@vue/composition-api'
+
+export default defineComponent({
+  name: 'SwerveInput'
+})
 </script>
 
 <style lang="scss">

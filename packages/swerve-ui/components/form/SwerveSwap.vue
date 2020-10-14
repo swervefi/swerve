@@ -17,14 +17,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "@vue/composition-api";
-import SwerveInput from "@/components/base/SwerveInput.vue";
+import { defineComponent } from '@vue/composition-api'
+import SwerveInput from '@/components/base/SwerveInput.vue'
 
 export default defineComponent({
   components: {
-    SwerveInput,
-  },
-});
+    SwerveInput
+  }
+})
 </script>
 
 <style lang="scss">
