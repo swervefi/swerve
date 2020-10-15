@@ -10,7 +10,7 @@
       </div>
       <div class="swap-info--item">
         <div class="label">Est. TX Cost:</div>
-        <div class="value">$X.XX</div>
+        <div class="value">{{ price | currency }}</div>
       </div>
     </div>
   </form>
@@ -23,30 +23,33 @@ import SwerveInput from '@/components/base/SwerveInput.vue'
 export default defineComponent({
   components: {
     SwerveInput
+  },
+  data() {
+    return {
+      tokens: [],
+      price: 400
+    }
   }
 })
 </script>
 
 <style lang="scss">
 .swerve-swap {
-  color: slategray;
-  background: white;
+  color: white;
+  background: #202426;
   height: 420px;
   width: 320px;
   border-radius: 12px;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-
-  input {
-    margin-bottom: 12px;
-    width: 240px;
-  }
+  // box-shadow: 0px 0px 12px 0px rgba(134, 252, 231, 1);
+  border: 1px solid rgba(174, 252, 251, 1);
 
   .swap-info {
     display: flex;
     flex-flow: column nowrap;
-    background: linen;
+    background: #202426;
     border-radius: 8px;
 
     &--item {

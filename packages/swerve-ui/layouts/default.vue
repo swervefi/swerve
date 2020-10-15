@@ -35,4 +35,14 @@ body {
   padding: 0;
   margin: 0;
 }
+
+a {
+  color: inherit;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
 </style>
