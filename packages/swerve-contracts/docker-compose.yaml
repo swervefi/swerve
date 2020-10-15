@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  ganache:
+    image: trufflesuite/ganache-cli:v6.10.1
+    env_file: .env
+    command: [
+        'node',
+        '/app/ganache-core.docker.cli.js',
+        '--port',
+        '8545',
+        # For simplifying development
+        '--fork',
+        '$FORK_URL',
+        # Unlock DAI contract
+        '--unlock',
+        '0x6B175474E89094C44Da98b954EedeAC495271d0F',
+        # Unlock DAI cache
+        '--unlock',
+        '0x9eb7f2591ed42dee9315b6e2aaf21ba85ea69f8c',
+        # Unlock CHI
+        '--unlock',
+        '0x0000000000004946c0e9F43F4Dee607b0eF1fA1c',
+        # For predictability
+        '--deterministic',
+        '--mnemonic',
+        'result soon dose birth swap lonely street staff course snack frog path',
+        # For persistance
+        '--db',
+        '/app/data/chain',
+      ]
+    ports:
+      - '8545:8545'
