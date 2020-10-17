@@ -1,5 +1,6 @@
 <template>
   <div>
+    <SwerveNavigation />
     <SwerveMenu />
     <nuxt />
   </div>
@@ -8,10 +9,12 @@
 <script lang="ts">
 import { defineComponent } from '@vue/composition-api'
 import SwerveMenu from '@/components/menu/SwerveMenu.vue'
+import SwerveNavigation from '@/components/menu/SwerveNavigation.vue'
 
 export default defineComponent({
   components: {
-    SwerveMenu
+    SwerveMenu,
+    SwerveNavigation
   }
 })
 </script>
