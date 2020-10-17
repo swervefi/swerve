@@ -11,7 +11,9 @@
         </div>
         <div class="swap-info--item">
           <div class="label">Est. TX Cost:</div>
-          <div class="value">{{ price | currency }}</div>
+          <div class="value">
+            {{ price | currency }}
+          </div>
         </div>
       </div>
     </form>
