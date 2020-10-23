@@ -5,10 +5,10 @@
         <nuxt-link to="/">Swap</nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/deposit">Deposit</nuxt-link>
+        <nuxt-link to="/deposit">Earn</nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/dao">DAO</nuxt-link>
+        <nuxt-link to="/dao">Vote</nuxt-link>
       </li>
     </ul>
   </nav>

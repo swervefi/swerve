@@ -55,4 +55,8 @@ a {
 ul {
   list-style: none;
 }
+
+p {
+  font-weight: 300;
+}
 </style>
