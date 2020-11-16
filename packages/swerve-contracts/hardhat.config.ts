@@ -1,3 +1,4 @@
+import * as dotenv from 'dotenv'
 import { task } from 'hardhat/config'
 import '@nomiclabs/hardhat-waffle'
 import '@nomiclabs/hardhat-ethers'
@@ -5,11 +6,14 @@ import 'hardhat-gas-reporter'
 import 'hardhat-contract-sizer'
 // ! dont include vyper plugin or sol contracts wont be compiled
 
-// TODO: read from process.env.KOVAN_PRIVATE_KEY
-const ETH_PRIVATE_KEY = ''
-const INFURA_PROJECT_ID = ''
+// Load environment file
+dotenv.config()
 
-// This is a sample Buidler task. To learn how to create your own go to
+// Set FORK_URL in `.env` file
+// @see https://hardhat.org/hardhat-network/
+const FORK_URL = process.env.FORK_URL || ''
+
+// This is a sample Hardhat task. To learn how to create your own go to
 // @see https://hardhat.org/guides/create-task.html
 task(
   'accounts',
@@ -30,20 +34,10 @@ task(
 export default {
   defaultNetwork: 'hardhat',
   networks: {
-    hardhat: {},
-    local: {
-      url: 'http://127.0.0.1:8545',
-    },
-    kovan: {
-      url: `https://kovan.infura.io/v3/${INFURA_PROJECT_ID}`,
-      // accounts: [`0x${ETH_PRIVATE_KEY}`],
-    },
-    rinkeby: {
-      url: `https://rinkeby.infura.io/v3/${INFURA_PROJECT_ID}`,
-      // accounts: [`0x${ETH_PRIVATE_KEY}`],
-    },
-    mainnet: {
-      url: `https://mainnet.infura.io/v3/${INFURA_PROJECT_ID}`,
+    hardhat: {
+      forking: {
+        url: FORK_URL,
+      },
     },
   },
   solidity: {

@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "> TODO: description",
   "author": "Grant Steuart <gmsteuart@gmail.com>",
-  "homepage": "https://github.com/GMSteuart/swerve#readme",
+  "homepage": "https://github.com/swervefi/swerve/tree/master/packages/swerve-contracts",
   "license": "MIT",
   "main": "lib/swerve-contracts.js",
   "directories": {
@@ -15,7 +15,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GMSteuart/swerve.git"
+    "url": "git+https://github.com/swervefi/swerve.git"
   },
   "dependencies": {},
   "devDependencies": {
@@ -30,6 +30,7 @@
     "@types/mocha": "^8.0.3",
     "@types/node": "^14.6.2",
     "chai": "^4.2.0",
+    "dotenv": "^8.2.0",
     "ethereum-waffle": "^3.0.2",
     "ethers": "^5.0.9",
     "hardhat": "^2.0.3",
@@ -40,9 +41,9 @@
   },
   "scripts": {
     "compile": "hardhat compile",
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "hardhat test"
   },
   "bugs": {
-    "url": "https://github.com/GMSteuart/swerve/issues"
+    "url": "https://github.com/swervefi/swerve/issues"
   }
 }

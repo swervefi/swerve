@@ -2,14 +2,28 @@
 
 Swerve contracts
 
-## Development
+## Installation
+
+Install dependencies
 
 ```sh
-docker-compose up
+npm install
 ```
 
-This will run the Docker containers attached to the console so the logs are actively visible and Ganache's blockchain updates can be seen in real-time. Alternatively, to run Docker Compose in detached mode:
+Copy the example environment file and set the `FORK_URL` variable to the desired mainnet fork endpoint. [Alchemy API](https://alchemyapi.io/) offers a great free tier with historical endpoint support.
 
 ```sh
-docker-compose up -d
+cp .env.example .env
+```
+
+## Compiling
+
+```sh
+npm run compile
+```
+
+## Testing
+
+```sh
+npm run test
 ```
