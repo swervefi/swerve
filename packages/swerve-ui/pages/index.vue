@@ -5,6 +5,7 @@
       <p>Want to know more about Swerve?</p>
       <SwerveCta to="/learn">Learn</SwerveCta>
     </SwerveCard>
+    <SwerveCta to="/styleguide">Styleguide</SwerveCta>
   </div>
 </template>
 
