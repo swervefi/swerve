@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "> TODO: description",
   "author": "Grant Steuart <gmsteuart@gmail.com>",
-  "homepage": "https://github.com/GMSteuart/swerve#readme",
+  "homepage": "https://github.com/swervefi/swerve/tree/master/packages/swerve-contracts",
   "license": "MIT",
   "main": "lib/swerve-contracts.js",
   "directories": {
@@ -15,14 +15,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GMSteuart/swerve.git"
+    "url": "git+https://github.com/swervefi/swerve.git"
   },
   "dependencies": {},
   "devDependencies": {
-    "@nomiclabs/buidler": "^1.4.4",
-    "@nomiclabs/buidler-ethers": "^2.0.0",
-    "@nomiclabs/buidler-vyper": "^1.3.3",
-    "@nomiclabs/buidler-waffle": "^2.0.0",
+    "@nomiclabs/hardhat-ethers": "^2.0.0",
+    "@nomiclabs/hardhat-vyper": "^2.0.0",
+    "@nomiclabs/hardhat-waffle": "^2.0.0",
     "@openzeppelin/buidler-upgrades": "^1.0.1",
     "@openzeppelin/contracts": "^3.1.0",
     "@openzeppelin/contracts-ethereum-package": "^3.0.0",
@@ -30,18 +29,21 @@
     "@types/chai": "^4.2.12",
     "@types/mocha": "^8.0.3",
     "@types/node": "^14.6.2",
-    "buidler-contract-sizer": "^1.0.2",
-    "buidler-gas-reporter": "^0.1.3",
     "chai": "^4.2.0",
+    "dotenv": "^8.2.0",
     "ethereum-waffle": "^3.0.2",
     "ethers": "^5.0.9",
+    "hardhat": "^2.0.3",
+    "hardhat-contract-sizer": "^2.0.2",
+    "hardhat-gas-reporter": "^1.0.1",
     "ts-node": "^9.0.0",
     "typescript": "^4.0.2"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "compile": "hardhat compile",
+    "test": "hardhat test"
   },
   "bugs": {
-    "url": "https://github.com/GMSteuart/swerve/issues"
+    "url": "https://github.com/swervefi/swerve/issues"
   }
 }
