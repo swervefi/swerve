@@ -15,18 +15,23 @@
   ],
   "scripts": {
     "dev": "nuxt-ts",
+    "dev:storybook": "nuxt-ts storybook",
     "build": "nuxt-ts build",
+    "build:storybook": "nuxt-ts storybook build",
     "generate": "nuxt-ts generate",
     "lint": "eslint --ext .ts,.js,.vue .",
     "start": "nuxt-ts start",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "devDependencies": {
+    "@babel/runtime-corejs3": "^7.12.5",
     "@nuxt/types": "^2.14.6",
     "@nuxt/typescript-build": "^2.0.3",
     "@nuxt/typescript-runtime": "^2.0.0",
     "@nuxtjs/eslint-config-typescript": "^3.0.0",
+    "@nuxtjs/storybook": "^3.2.0",
     "@nuxtjs/style-resources": "^1.0.0",
+    "core-js": "^3.7.0",
     "eslint": "^7.11.0",
     "eslint-config-prettier": "^6.12.0",
     "eslint-loader": "^4.0.2",
@@ -39,6 +44,7 @@
   },
   "dependencies": {
     "@vue/composition-api": "^1.0.0-beta.16",
-    "nuxt": "^2.14.6"
+    "nuxt": "^2.14.6",
+    "nuxt-i18n": "^6.15.4"
   }
 }
