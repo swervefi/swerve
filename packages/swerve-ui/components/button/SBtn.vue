@@ -1,8 +1,8 @@
 <template>
-  <div class="btn" :class="">
-    <nuxt-link :to="to" class="btn__link"
-      ><slot></slot><i class="icon">&raquo;</i></nuxt-link
-    >
+  <div class="btn" :class="{ fill }">
+    <nuxt-link :to="to" class="btn__link">
+      <slot></slot>
+    </nuxt-link>
   </div>
 </template>
 
@@ -11,7 +11,15 @@ import { defineComponent } from '@vue/composition-api'
 
 export default defineComponent({
   props: {
-    to: String
+    /**
+     * An acceptable v-router string
+     * @TODO: handle with better typing
+     */
+    to: String,
+    /**
+     * Adds a fill class to button.
+     */
+    fill: Boolean,
   },
   data() {
     return {
@@ -22,19 +30,31 @@ export default defineComponent({
 
 <style lang="scss">
 .btn {
-  &__link {
-    transition: all 300ms ease-out;
-    padding: 0.5em 1em;
-    background: rgba(174, 252, 251, 1);
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  height: 2.5rem;
+  border-radius: 1.25rem;
+  color: rgba(163, 249, 231, 1);
+  transition: all 150ms ease-out;
+  border: 1px solid rgba(163, 249, 231, 1);
+
+  &.fill {
+    background: rgba(163, 249, 231, 1);
     color: rgba(18, 20, 21, 1);
+  }
 
-    .icon {
-      margin-left: 0.5em;
-    }
+  &:hover {
+    border-color: rgba(143, 229, 211, 1);
+    color: rgba(143, 229, 211, 1);
 
-    &:hover {
-      background: rgba(134, 252, 231, 1);
-      // color: #202426;
+    &.fill {
+      // background: rgba(153, 239, 221, 1); // -10 offset
+      background: rgba(148, 234, 216, 1); // -15 offset
+      // background: rgba(143, 229, 211, 1); // -20 offset
+      // background: rgba(138, 224, 206, 1); // -25 offset
+      color: rgba(18, 20, 21, 1);
     }
   }
 }
