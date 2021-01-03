@@ -3,22 +3,22 @@
     <SwerveSwap />
     <SwerveCard class="card--learn">
       <p>Want to know more about Swerve?</p>
-      <SwerveCta to="/learn">Learn</SwerveCta>
+      <SBtn to="/learn">Learn</SBtn>
     </SwerveCard>
-    <SwerveCta to="/styleguide">Styleguide</SwerveCta>
+    <SBtn to="/styleguide">Styleguide</SBtn>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from '@vue/composition-api'
 import SwerveCard from '@/components/base/SwerveCard.vue'
-import SwerveCta from '@/components/button/SwerveCta.vue'
+import SBtn from '@/components/button/SBtn.vue'
 import SwerveSwap from '@/components/form/SwerveSwap.vue'
 
 export default defineComponent({
   components: {
     SwerveCard,
-    SwerveCta,
+    SBtn,
     SwerveSwap
   }
 })

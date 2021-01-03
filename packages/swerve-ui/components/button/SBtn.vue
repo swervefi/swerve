@@ -1,6 +1,6 @@
 <template>
-  <div class="cta">
-    <nuxt-link :to="to" class="cta__link"
+  <div class="btn" :class="">
+    <nuxt-link :to="to" class="btn__link"
       ><slot></slot><i class="icon">&raquo;</i></nuxt-link
     >
   </div>
@@ -21,7 +21,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-.cta {
+.btn {
   &__link {
     transition: all 300ms ease-out;
     padding: 0.5em 1em;
