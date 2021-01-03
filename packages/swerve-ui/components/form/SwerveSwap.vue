@@ -2,8 +2,8 @@
   <SwerveCard>
     <form class="swerve-swap">
       <p>Swap using Swerve pools</p>
-      <SwerveInput label="from" />
-      <SwerveInput label="to" />
+      <SInput label="from" />
+      <SInput label="to" />
       <div class="swap-info">
         <div class="swap-info--item">
           <div class="label">Price:</div>
@@ -23,13 +23,13 @@
 <script lang="ts">
 import { defineComponent } from '@vue/composition-api'
 import SwerveCard from '@/components/base/SwerveCard.vue'
-import SwerveInput from '@/components/input/SwerveInput.vue'
+import SInput from '@/components/input/SInput.vue'
 import currency from "@/filters/currency.ts"
 
 export default defineComponent({
   components: {
     SwerveCard,
-    SwerveInput
+    SInput
   },
   data() {
     return {
