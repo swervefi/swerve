@@ -37,7 +37,7 @@ export default defineComponent({
 html {
   color: white;
   background: #2f3437;
-  font-size: 10pt;
+  font-size: 16px;
   text-align: center;
 }
 

@@ -8,6 +8,12 @@ a decrentralized finance application for optimal stablecion swaps.
 - Provide liquidity
 - DAO operated
 
+## Community
+
+[Discord](https://discord.gg/6dZtAZP8j3)
+[Twitter](https://twitter.com/SwerveFinance)
+[Newsletter](https://swervenewsletter.substack.com/)
+
 ## Installation
 
 ```sh
