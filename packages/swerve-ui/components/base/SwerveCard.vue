@@ -15,8 +15,7 @@ export default Vue.extend({
 .card {
   background: #202426;
   border-radius: 12px;
-  // box-shadow: 0px 0px 12px 0px rgba(134, 252, 231, 1);
-  border: 1px solid rgba(174, 252, 251, 1);
+  border: 1px solid rgba(163, 249, 231, 1);
   padding: 1em;
 }
 </style>

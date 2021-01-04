@@ -1,7 +1,7 @@
 import SBtn from './SBtn.vue'
 
 export default {
-  title: 'Button',
+  title: 'Components/Button',
   component: SBtn
 }
 

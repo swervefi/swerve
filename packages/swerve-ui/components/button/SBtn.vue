@@ -50,10 +50,7 @@ export default defineComponent({
     color: rgba(143, 229, 211, 1);
 
     &.fill {
-      // background: rgba(153, 239, 221, 1); // -10 offset
-      background: rgba(148, 234, 216, 1); // -15 offset
-      // background: rgba(143, 229, 211, 1); // -20 offset
-      // background: rgba(138, 224, 206, 1); // -25 offset
+      background: rgba(148, 234, 216, 1);
       color: rgba(18, 20, 21, 1);
     }
   }
