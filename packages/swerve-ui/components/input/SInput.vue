@@ -1,6 +1,6 @@
 <template>
   <div class="field" :class="{ required }">
-    <input type="text" :value="value" :id="name" :aria-required="required" />
+    <input :id="name" type="text" :value="value" :aria-required="required">
     <label :for="name">
       {{ label }}
     </label>
@@ -14,6 +14,9 @@ import SToken from '@/components/base/SToken.vue'
 
 export default defineComponent({
   name: 'SInput',
+  components: {
+    SToken
+  },
   inheritAttrs: false,
   props: {
     /**
@@ -32,17 +35,14 @@ export default defineComponent({
      */
     required: Boolean
   },
-  components: {
-    SToken
-  },
-  computed: {
-    name(): String {
-      return this.label.replace(" ", "-")
+  data () {
+    return {
+      value: ''
     }
   },
-  data() {
-    return {
-      value: ""
+  computed: {
+    name (): String {
+      return this.label.replace(' ', '-')
     }
   }
 })
@@ -52,7 +52,7 @@ export default defineComponent({
 .field {
   display: flex;
   flex-flow: column-reverse;
-  align-items: start;
+  align-items: flex-start;
 }
 
 input {

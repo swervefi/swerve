@@ -1,8 +1,9 @@
 <template>
-  <div class="token" :class="token" v-html="content"></div>
+  <div class="token" :class="token" v-html="content" />
 </template>
 
 <script lang="ts">
+import { ComponentMap } from '@/types'
 import { defineComponent } from '@vue/composition-api'
 import DaiIcon from '~/assets/tokens/dai.svg?raw'
 import UsdcIcon from '~/assets/tokens/usdc.svg?raw'
@@ -19,12 +20,12 @@ export default defineComponent({
       type: String,
       required: false,
       default: 'default',
-      validator: function (value: string) {
-        return ['dai', 'usdc', 'usdt', 'tusd'].indexOf(value) !== -1
+      validator (value: string) {
+        return ['dai', 'usdc', 'usdt', 'tusd'].includes(value)
       }
     }
   },
-  data() {
+  data () {
     return {
       tokenIconMap: {
         default: DefaultIcon,
@@ -32,13 +33,12 @@ export default defineComponent({
         usdc: UsdcIcon,
         usdt: UsdtIcon,
         tusd: TusdIcon
-      }
+      } as ComponentMap
     }
   },
   computed: {
-    content() {
-      if (this.token in this.tokenIconMap)
-      {
+    content () {
+      if (this.token in this.tokenIconMap) {
         return this.tokenIconMap[this.token]
       }
       return DefaultIcon

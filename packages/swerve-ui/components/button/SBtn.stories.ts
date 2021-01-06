@@ -21,3 +21,7 @@ export const Filled = () => ({
   },
   template: '<SBtn fill>Filled</SBtn>'
 })
+
+export const Link = () => ({
+  template: '<SBtn to="/styleguide">Styleguide</SBtn>'
+})

@@ -1,3 +1,5 @@
+import { Component } from 'vue'
+
 export interface Token {
   symbol?: string
   decimals?: number
@@ -14,3 +16,7 @@ export interface USDC extends Token {
 }
 
 export type StableToken = DAI | USDC
+
+export interface ComponentMap {
+  [key: string]: Component
+}

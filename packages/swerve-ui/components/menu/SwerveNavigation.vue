@@ -1,17 +1,23 @@
 <template>
   <nav class="navigation">
     <div class="logo">
-      <img src="/logo.svg" width="160" />
+      <img src="/logo.svg" width="160">
     </div>
     <ul>
       <li>
-        <nuxt-link to="/">Home</nuxt-link>
+        <nuxt-link to="/">
+          Home
+        </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/">About</nuxt-link>
+        <nuxt-link to="/">
+          About
+        </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/">Learn</nuxt-link>
+        <nuxt-link to="/">
+          Learn
+        </nuxt-link>
       </li>
     </ul>
   </nav>

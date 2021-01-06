@@ -13,7 +13,7 @@ export default {
   }
 }
 
-const Template = (args: any, { argTypes }: any) => ({
+const Template = (_args: any, { argTypes }: any) => ({
   props: Object.keys(argTypes),
   components: { SToken },
   template: '<SToken @onClick="onClick" v-bind="$props" />'

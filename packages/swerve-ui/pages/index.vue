@@ -3,9 +3,10 @@
     <SwerveSwap />
     <SwerveCard class="card--learn">
       <p>Want to know more about Swerve?</p>
-      <SBtn to="/learn">Learn</SBtn>
+      <SBtn to="/learn">
+        Learn
+      </SBtn>
     </SwerveCard>
-    <SBtn to="/styleguide">Styleguide</SBtn>
   </div>
 </template>
 
