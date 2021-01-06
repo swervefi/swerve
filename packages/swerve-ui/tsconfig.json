@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ES2018",
     "module": "ESNext",
-    "moduleResolution": "Node",
+    "moduleResolution": "node",
     "lib": [
       "ESNext",
       "ESNext.AsyncIterable",
@@ -28,6 +28,12 @@
       "nuxt-i18n"
     ]
   },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.vue",
+    "vue-shim.d.ts"
+  ],
   "exclude": [
     "node_modules"
   ]

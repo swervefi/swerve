@@ -1,5 +1,5 @@
 <svg viewBox="0 0 24 24" display="inline-block" focusable="false"
-    role="presentation" height="46px" width="46px">
+    role="presentation">
     <g>
         <circle cx="12" cy="12" r="10" fill="url(#paint0_linear_dai)"></circle>
         <path fill-rule="evenodd" clip-rule="evenodd"

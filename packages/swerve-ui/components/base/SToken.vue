@@ -3,13 +3,15 @@
 </template>
 
 <script lang="ts">
+import { Component } from 'vue'
 import { ComponentMap } from '@/types'
 import { defineComponent } from '@vue/composition-api'
-import DaiIcon from '~/assets/tokens/dai.svg?raw'
-import UsdcIcon from '~/assets/tokens/usdc.svg?raw'
-import UsdtIcon from '~/assets/tokens/usdt.svg?raw'
-import TusdIcon from '~/assets/tokens/tusd.svg?raw'
-import DefaultIcon from '~/assets/tokens/default-token.svg?raw'
+import isValidToken from '@/lib/validators/token'
+const UsdcIcon = require('~/assets/tokens/usdc.svg?raw')
+const UsdtIcon = require('~/assets/tokens/usdt.svg?raw')
+const TusdIcon = require('~/assets/tokens/tusd.svg?raw')
+const DefaultIcon = require('~/assets/tokens/default-token.svg?raw')
+const DaiIcon = require('~/assets/tokens/dai.svg?raw')
 
 export default defineComponent({
   props: {
@@ -20,9 +22,7 @@ export default defineComponent({
       type: String,
       required: false,
       default: 'default',
-      validator (value: string) {
-        return ['dai', 'usdc', 'usdt', 'tusd'].includes(value)
-      }
+      validator: isValidToken
     }
   },
   data () {
@@ -37,7 +37,7 @@ export default defineComponent({
     }
   },
   computed: {
-    content () {
+    content (): Component {
       if (this.token in this.tokenIconMap) {
         return this.tokenIconMap[this.token]
       }
