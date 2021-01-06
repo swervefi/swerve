@@ -13,24 +13,10 @@ export default {
   }
 }
 
-const Template = (args: any, { argTypes }: any) => ({
+const Template = (_args: any, { argTypes }: any) => ({
   props: Object.keys(argTypes),
   components: { SToken },
   template: '<SToken @onClick="onClick" v-bind="$props" />'
 })
 
 export const Default = Template.bind({})
-
-// export const Eth = () => ({
-//   components: {
-//     SToken
-//   },
-//   template: '<SToken token="`Eth`"></SToken>'
-// })
-
-// export const Usdc = () => ({
-//   components: {
-//     SToken
-//   },
-//   template: '<SToken token="`Usdc`"></SToken>'
-// })

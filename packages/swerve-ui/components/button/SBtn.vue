@@ -1,7 +1,7 @@
 <template>
   <div class="btn" :class="{ fill }">
     <nuxt-link :to="to" class="btn__link">
-      <slot></slot>
+      <slot />
     </nuxt-link>
   </div>
 </template>
@@ -15,13 +15,16 @@ export default defineComponent({
      * An acceptable v-router string
      * @TODO: handle with better typing
      */
-    to: String,
+    to: {
+      type: String,
+      default: ''
+    },
     /**
      * Adds a fill class to button.
      */
-    fill: Boolean,
+    fill: Boolean
   },
-  data() {
+  data () {
     return {
     }
   }

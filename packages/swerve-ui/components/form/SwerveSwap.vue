@@ -6,11 +6,17 @@
       <SInput label="to" />
       <div class="swap-info">
         <div class="swap-info--item">
-          <div class="label">Price:</div>
-          <div class="value">{{ price | currency }} AAA/BBB</div>
+          <div class="label">
+            Price:
+          </div>
+          <div class="value">
+            {{ price | currency }} AAA/BBB
+          </div>
         </div>
         <div class="swap-info--item">
-          <div class="label">Est. TX Cost:</div>
+          <div class="label">
+            Est. TX Cost:
+          </div>
           <div class="value">
             {{ price | currency }}
           </div>
@@ -24,21 +30,21 @@
 import { defineComponent } from '@vue/composition-api'
 import SwerveCard from '@/components/base/SwerveCard.vue'
 import SInput from '@/components/input/SInput.vue'
-import currency from "@/filters/currency.ts"
+import currency from '@/lib/filters/currency.ts'
 
 export default defineComponent({
   components: {
     SwerveCard,
     SInput
   },
-  data() {
+  filters: {
+    currency
+  },
+  data () {
     return {
       tokens: [],
       price: 400
     }
-  },
-  filters: {
-    currency
   }
 })
 </script>

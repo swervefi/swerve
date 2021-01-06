@@ -2,13 +2,19 @@
   <nav>
     <ul>
       <li>
-        <nuxt-link to="/">Swap</nuxt-link>
+        <nuxt-link to="/">
+          Swap
+        </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/deposit">Earn</nuxt-link>
+        <nuxt-link to="/deposit">
+          Earn
+        </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/dao">Vote</nuxt-link>
+        <nuxt-link to="/dao">
+          Vote
+        </nuxt-link>
       </li>
     </ul>
   </nav>

@@ -1,16 +1,14 @@
 <template>
   <div class="field" :class="{ required }">
-    <input type="text" :value="value" :id="name" :aria-required="required" />
+    <input :id="name" v-model="value" :type="type" :aria-required="required">
     <label :for="name">
       {{ label }}
     </label>
-    <SToken />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from '@vue/composition-api'
-import SToken from '@/components/base/SToken.vue'
 
 export default defineComponent({
   name: 'SInput',
@@ -30,19 +28,22 @@ export default defineComponent({
     /**
      * Forces user to supply input
      */
-    required: Boolean
-  },
-  components: {
-    SToken
-  },
-  computed: {
-    name(): String {
-      return this.label.replace(" ", "-")
+    required: Boolean,
+    type: {
+      default: 'number',
+      validator (s: string) {
+        return ['text', 'number'].includes(s)
+      }
     }
   },
-  data() {
+  data () {
     return {
-      value: ""
+      value: ''
+    }
+  },
+  computed: {
+    name (): String {
+      return this.label.replace(' ', '-')
     }
   }
 })
@@ -52,7 +53,8 @@ export default defineComponent({
 .field {
   display: flex;
   flex-flow: column-reverse;
-  align-items: start;
+  align-items: flex-start;
+  flex: 1 1 auto;
 }
 
 input {
@@ -62,6 +64,7 @@ input {
   border-radius: 0.25em;
   color: rgba(240, 240, 240, 1); // Initial state
   height: 3.5em;
+  width: 100%;
 
   &.cyberpunk {
     color: rgba(134, 252, 231, 1);

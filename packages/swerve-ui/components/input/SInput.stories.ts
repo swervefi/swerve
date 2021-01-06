@@ -18,3 +18,25 @@ export const Disabled = () => ({
   },
   template: '<SInput label="Disabled" disabled></SInput>'
 })
+
+// TODO: make input active
+export const Active = () => ({
+  components: {
+    SInput
+  },
+  template: '<SInput label="Active"></SInput>'
+})
+
+export const Complete = () => ({
+  components: {
+    SInput
+  },
+  template: '<SInput label="Disabled"></SInput>'
+})
+
+export const Error = () => ({
+  components: {
+    SInput
+  },
+  template: '<SInput label="Error"></SInput>'
+})
