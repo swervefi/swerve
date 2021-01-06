@@ -30,7 +30,7 @@
 import { defineComponent } from '@vue/composition-api'
 import SwerveCard from '@/components/base/SwerveCard.vue'
 import SInput from '@/components/input/SInput.vue'
-import currency from '@/filters/currency.ts'
+import currency from '@/lib/filters/currency.ts'
 
 export default defineComponent({
   components: {
