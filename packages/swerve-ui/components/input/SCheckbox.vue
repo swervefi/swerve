@@ -1,6 +1,6 @@
 <template>
   <div class="checkbox">
-    <input :id="name" type="checkbox" :value="value" />
+    <input :id="name" type="checkbox" :value="value">
     <label :for="name">{{ label }}</label>
   </div>
 </template>
@@ -9,11 +9,17 @@
 import { defineComponent } from '@vue/composition-api'
 
 export default defineComponent({
+  name: 'SCheckbox',
   props: {
-    label: String
+    label: {
+      type: String,
+      default: '',
+      required: true
+    }
   },
-  data() {
+  data () {
     return {
+
     }
   }
 })
