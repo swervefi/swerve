@@ -21,22 +21,31 @@ export default defineComponent({
 
 <style lang="scss">
 /**
+* Resets
+*/
+@supports(-webkit-appearance: none) or (-moz-appearance: none) {
+  input[type='checkbox'],
+  input[type='radio'] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+}
+
+/**
 * Mulish Font Family
 * @see https://fonts.google.com/specimen/Mulish
 */
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300;500;700&display=swap");
 
-:root {
-  font-family: "Mulish", sans-serif;
-}
-
-* {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
 html {
   color: white;
-  background: #2f3437;
+  background: rgba(76, 80, 84, 1);
   font-size: 16px;
   text-align: center;
 }
