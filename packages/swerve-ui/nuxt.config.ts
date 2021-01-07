@@ -23,7 +23,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['~assets/sass/_variables.scss'],
+  css: ['~assets/styles/global.css'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -45,7 +45,7 @@ export default {
    ** Global stylesheets
    */
   styleResources: {
-    scss: ['./assets/scss/*.scss']
+    scss: ['./assets/styles/*.scss']
   },
   /*
    ** Build configuration
@@ -86,11 +86,5 @@ export default {
    * Storybook
    * @see https://storybook.nuxtjs.org/options/
    */
-  storybook: {
-    parameters: {
-      backgrounds: {
-        default: '#2f3437'
-      }
-    }
-  }
+  storybook: {}
 }

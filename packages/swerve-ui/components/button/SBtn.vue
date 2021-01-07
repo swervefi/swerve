@@ -45,7 +45,7 @@ export default defineComponent({
 
   &.fill {
     background: rgba(163, 249, 231, 1);
-    color: rgba(18, 20, 21, 1);
+    color: var(--secondary-color);
   }
 
   &:hover {
@@ -54,7 +54,7 @@ export default defineComponent({
 
     &.fill {
       background: rgba(148, 234, 216, 1);
-      color: rgba(18, 20, 21, 1);
+      color: var(--secondary-color);
     }
   }
 }
