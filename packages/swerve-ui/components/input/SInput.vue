@@ -1,6 +1,13 @@
 <template>
   <div class="field" :class="{ required }">
-    <input :id="name" v-model="value" :type="type" :aria-required="required">
+    <input
+      :id="name"
+      v-model="value"
+      :type="type"
+      :aria-required="required"
+      :disabled="disabled"
+      :readonly="readonly"
+    >
     <label :for="name">
       {{ label }}
     </label>
@@ -25,6 +32,7 @@ export default defineComponent({
       type: String,
       required: true
     },
+    readonly: Boolean,
     /**
      * Forces user to supply input
      */
@@ -58,7 +66,7 @@ export default defineComponent({
 }
 
 input {
-  background: rgba(18, 20, 21, 1);
+  background: var(--secondary-color);
   padding: 0.25em;
   border: none;
   border-radius: 0.25em;
@@ -74,19 +82,24 @@ input {
   }
 
   &:disabled {
-    background: rgba($color: #2f3437, $alpha: 0.6);
+    background: var(--disabled-color);
     color: white;
     border-style: none;
   }
 
   &:focus {
-    color: rgba(255, 255, 255, 1);
-    border: 1px solid rgba(174, 252, 251, 1);
+    color: var(--text-color);
+    border: 1px solid var(--primary-color);
     outline: none;
 
     &.cyberpunk {
       box-shadow: 0px 0px 12px 0px rgba(134, 252, 231, 1);
     }
+  }
+
+  &:read-only {
+    // TODO: Read only inputs
+    cursor: not-allowed;
   }
 }
 
