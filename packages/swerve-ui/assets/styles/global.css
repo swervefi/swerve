@@ -1,0 +1,14 @@
+:root {
+  /* Color Palette */
+  --primary-color: rgba(174, 252, 251, 1);
+  --secondary-color: rgba(18, 20, 21, 1);
+  --card-color: rgba(33, 36, 38, 1);
+  --background-color: rgba(48, 52, 55, 1);
+  --disabled-color: rgba(118, 120, 131, 1);
+  --text-color: rgba(255, 255, 255, 1);
+  /* --disabled-text-color: rgba(76, 80, 84, 1); */
+  --error-color: rgba(255, 77, 79, 1);
+  --success-color: rgba(59, 149, 14, 1);
+
+  font-family: 'Mulish', sans-serif;
+}

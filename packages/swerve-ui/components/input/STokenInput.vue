@@ -62,7 +62,7 @@ export default defineComponent({
     right: 1.5em;
 
     &__max {
-      color: rgba(174, 252, 251, 1);
+      color: var(--primary-color);
       font-size: 0.875em;
     }
 
